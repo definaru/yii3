@@ -1,0 +1,119 @@
+:root {
+    --vp-c-brand-1: #40B3D8;
+    --vp-c-brand-2: #83C933;
+    --vp-c-brand-3: #F18A2A; 
+}
+.wrapper-yii {
+    width: 60%;
+    margin: auto;
+    padding-top: 200px;
+}
+.wrapper-yii h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.wrapper-yii h3 {
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.wrapper-yii p {
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+.wrapper-yii a {
+    font-weight: 500;
+    color: var(--vp-c-brand-1);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.25s, opacity 0.25s;
+}
+.wrapper-yii a:hover {
+    color: var(--vp-c-brand-2);
+}
+.wrapper-yii .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px 0;
+    gap: 15px;
+}
+.dark hr {
+    height:1px;
+    border-width:0;
+    color:#000;
+    background-color:#000;
+    margin: 50px 0;
+}
+hr {
+    height:1px;
+    border-width:0;
+    color:#ddd;
+    background-color:#ddd;
+    margin: 50px 0;
+}
+
+html.dark .response {filter: invert(1);}
+
+a.medium.brand {color: #222 !important;}
+.image-bg::before {
+    content: '';
+    position: absolute;
+    width: 65%;
+    height: 65%;
+    background-color: rgb(139 195 74 / 38%);
+    border-radius: 50em;
+    filter: blur(5.5rem);
+    z-index: 1;
+    top: 15%;
+    right: 68%;
+}
+.image-bg::after {
+    content: '';
+    position: absolute;
+    width: 65%;
+    height: 65%;
+    background-color: hsl(28.94deg 87.67% 55.49% / 76%);
+    border-radius: 50em;
+    filter: blur(5.5rem);
+    z-index: 1;
+    top: -10%;
+    right: -6%;
+}
+.image::after {
+    content: '';
+    position: absolute;
+    width: 24%;
+    height: 39%;
+    background-color: rgb(74 92 195 / 23%);
+    border-radius: 50em;
+    filter: blur(5.5rem);
+    z-index: 0;
+    top: 24%;
+    right: 25%;
+}
+.tags p {
+    display: flex;
+    gap: 5px;
+}
+/* .container {
+    max-width: calc(var(--vp-layout-max-width) - 250px) !important;
+} */
+
+@media screen and (max-width:767px) {
+    .wrapper-yii {
+        width: 85%;
+        margin: auto;
+        padding-top: 60px;
+    }
+    .wrapper-yii .items {
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-rows: repeat(2, 1fr);
+        padding: 0;
+        gap: 45px;
+    }
+    .wrapper-yii .item ul li {
+        margin-bottom: 10px;
+    }
+}
